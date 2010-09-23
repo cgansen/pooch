@@ -1,0 +1,39 @@
+body {
+	font-family: 'Lucida Grande', sans-serif;
+	font-size: 12pt;
+	background-color: #fff;
+}
+
+#wrapper {
+	padding: 5px;
+	width: 980px;
+	margin: 0 auto;
+	background-color: #FFF6AC;
+	min-height: 480px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 5px solid #FFDE31;
+}
+
+#title {
+	text-align: center;
+}
+
+.task-instance {
+	display: none;
+}
+
+.task-instance-notes {
+	display: none;
+}
+
+
+/* Form elements */
+label { display: block; font-weight: bold; }
+
+input { width: 95%; color: #333; font-size: 14pt; }
+
+input#task-create { font-weight: bold; width: auto; }
+
+textarea { max-width: 600px; width: 100%; }

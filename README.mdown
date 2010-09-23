@@ -1,0 +1,3 @@
+# Pooch README
+
+Pooch is a test app that demonstrates HTML5 technologies.
