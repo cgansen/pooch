@@ -13,19 +13,49 @@ body {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	border: 5px solid #FFDE31;
+	border: 3px solid #FFDE31;
 }
 
 #title {
 	text-align: center;
 }
 
+/* Task instance */
+.clear {
+	clear: both;
+}
+
 .task-instance {
 	display: none;
+	border: 3px solid #ccc;
+	margin-top: 5px;
+	padding: 10px;
+	background-color: #eee;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	vertical-align: middle;
+	-webkit-box-shadow: inset 0 1px 5px #aaa, inset 0 -1px 5px #aaa;
+	-moz-box-shadow: inset 0 1px 5px #aaa, inset 0 -1px 5px #aaa;
 }
 
 .task-instance-notes {
 	display: none;
+	clear:both;
+	font-size: 0.75em;
+	padding-top: 5px;
+}
+
+.task-instance-title {
+	float: left;
+}
+
+.task-instance-due-date {
+	float: right;
+	border-left: 1px solid #ccc;
+	padding-left: 5px;
+	font-size: 0.75em;
+	text-shadow: -1px -1px #fff;	
 }
 
 #footer {
@@ -47,6 +77,6 @@ label { display: block; font-weight: bold; }
 
 input { width: 95%; color: #333; font-size: 14pt; }
 
-input#task-create { font-weight: bold; width: auto; }
+input#task-create { font-weight: bold; width: auto; width: 100%;}
 
-textarea { max-width: 600px; width: 100%; }
+textarea { max-width: 600px; width: 100%; font-family: 'Lucida Grande';}

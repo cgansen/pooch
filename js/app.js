@@ -13,8 +13,14 @@ var Pooch = {
 	},
 
 	'insert_task_in_list': function(task) {
-		$("#task-list").append("<div class='task-instance'><p class='task-instance-title'><a href='#' onclick='Pooch.show_notes($(this).parent().parent()); return false;'>" + task.title + "</a>, due " + task.due + " </p> \
-			<p class='task-instance-notes'>" + task.notes + "</p></div>");
+		$("#task-list").append("<div class='task-instance'>" +
+				"<div class='task-instance-title'>" +
+					"<a href='#' onclick='Pooch.show_notes($(this).parent().parent()); return false;'>" + task.title + "</a></div>" +
+					"<div class='task-instance-due-date'>" + task.due + "</div>" +
+				"<div class='task-instance-notes'>" + task.notes + "</div>" +
+				"<div class='clear' /></div>"
+		);
+		
 		$('.task-instance:last').fadeIn();
 	},
 
