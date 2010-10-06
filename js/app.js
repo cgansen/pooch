@@ -20,6 +20,7 @@ var Pooch = {
 	'insert_task_in_list': function(task) {
 		$("#task-list").append("<div class='task-instance'>" +
 				"<div class='task-instance-title'>" +
+					"<canvas width='15' height='15' style='border:1px solid #ccc; margin-right:5px;' id='task-" + task.id + "' onclick='Pooch.mark_complete(\"" + task.id + "\");'></canvas>" +
 					"<a href='#' onclick='Pooch.show_notes($(this).parent().parent()); return false;'>" + task.title + "</a></div>" +
 					"<div class='task-instance-due-date'>" + task.due + "</div>" +
 				"<div class='task-instance-notes'>" + task.notes + "</div>" +
@@ -46,6 +47,15 @@ var Pooch = {
 
 	'reset': function(){
 		localStorage['pooch:tasks'] = JSON.stringify([]);
+	},
+	
+	'mark_complete': function(tid){
+    $.each(this.tasks, function(index, task){
+      if(task.id == tid){
+        task.completed = true;
+        document.getElementById('task-' + tid).getContext('2d').fillRect(3,3,9,9 );
+      }
+    });        
 	}
 
 }
@@ -54,6 +64,8 @@ function Task(title, due, notes){
 	this.title = title;
 	this.due = due;
 	this.notes = notes;
+	this.completed = false;
+	this.id = (new Date()).getTime();
 }
 
 $(document).ready(function() {
