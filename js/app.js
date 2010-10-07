@@ -3,15 +3,12 @@ var Pooch = {
 
 	'init': function(){
 		this.tasks = [];
-		this.highlight_active_panel();
+		this.highlight_active_panel(window.location.hash);
 	},
 	
 	'highlight_active_panel': function(panel){
 	  $('li.toolbar-item').removeClass('toolbar-item-active');
-    if (panel == undefined){
-      panel = window.location.hash;
-    }
-	  $(panel).addClass('toolbar-item-active');
+	  $("li" + panel).addClass('toolbar-item-active');
 	  
 	  $('.panel').hide();
 	  $("div" + panel).show();
@@ -24,6 +21,7 @@ var Pooch = {
 	'create_new_task': function(){ 
 		task = new Task( $('#task-title').val(), $('#task-due').val(), $('#task-notes').val() ); 
 		this.add_task(task);		
+		this.highlight_active_panel('#today');
 	},
 
 	'add_task': function(task){
