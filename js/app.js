@@ -6,12 +6,12 @@ var Pooch = {
 		var panel = window.location.hash ? window.location.hash : '#today'; 
 		this.highlight_active_panel(panel);
 		
-		// load the map
+    // load the map
     var myOptions = {
       zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    
+
     map = new google.maps.Map(document.getElementById("nearby-map"), myOptions);
 
     // code from http://code.google.com/apis/maps/documentation/javascript/basics.html#DetectingUserLocation
