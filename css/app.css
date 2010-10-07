@@ -28,6 +28,8 @@ div#new-task {
   top: 60px;
 }
 
+
+
 /* Task instance */
 .clear {
 	clear: both;
@@ -140,3 +142,16 @@ input { width: 95%; color: #333; font-size: 14pt; }
 input#task-create { font-weight: bold; width: auto; width: 100%;}
 
 textarea { max-width: 600px; width: 100%; font-family: 'Lucida Grande';}
+
+/* map */
+
+#nearby-map {
+/*  height: 100%;
+  width: 100%;
+*/
+  position:absolute; 
+  top:60px; 
+  width:100%; 
+  border:1px solid black; 
+  height:300px;
+}

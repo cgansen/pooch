@@ -1,9 +1,28 @@
 var Pooch = {
 	'tasks': [],
+	'map': '',
 
 	'init': function(){
 		this.tasks = [];
 		this.highlight_active_panel(window.location.hash);
+		
+		// load the map
+    var myOptions = {
+      zoom: 11,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    
+    this.map = new google.maps.Map(document.getElementById("nearby-map"), myOptions);
+
+    // code from http://code.google.com/apis/maps/documentation/javascript/basics.html#DetectingUserLocation
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+        this.map.setCenter(initialLocation);
+      }, function() {
+        this.map.setCenter(new google.maps.LatLng(41.947372, -87.655788)); // let's play two!
+      });
+    }
 	},
 	
 	'highlight_active_panel': function(panel){
