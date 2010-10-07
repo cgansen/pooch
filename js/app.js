@@ -3,6 +3,20 @@ var Pooch = {
 
 	'init': function(){
 		this.tasks = [];
+		this.highlight_active_panel();
+	},
+	
+	'highlight_active_panel': function(panel){
+	  $('li.toolbar-item').removeClass('toolbar-item-active');
+    if (panel == undefined){
+      panel = window.location.hash;
+    }
+	  $(panel).addClass('toolbar-item-active');
+	},
+	
+	'show_panel': function(panel){
+	  // FIXME: make this toggle panels
+	  this.highlight_active_panel(panel);
 	},
 	
 	'create_new_task': function(){ 

@@ -8,24 +8,46 @@
 	</head>
 	<body>
 		<div id="wrapper">
-		<form id="new-task-form">
-			<p>
-				<label for="task-title">Title</label>
-				<input id="task-title" type="text" name="task[title]"/>
-			</p>
-			<p>
-				<label for="task-title">Due date</label>
-				<input id="task-due" type="text" name="task[due]"/>
-			</p>
-			<p>
-				<label for="task-notes">Notes</label>
-				<textarea id="task-notes" style="" name="task[notes]"></textarea>
-			</p>
+  		<div id="toolbar">
+  		  <ul>
+  		    <a href="#today" onclick="Pooch.show_panel('#today');">
+  		      <li class="toolbar-item" id="today">
+  		      Today
+  		      </li>
+  	      </a>
+  		    <a href="#next" onclick="Pooch.show_panel('#next');">
+  		      <li class="toolbar-item" id="next">
+  		      Next
+  		      </li>
+  	      </a>
+  		    <a href="#nearby" onclick="Pooch.show_panel('#nearby');">
+  		      <li class="toolbar-item" id="nearby">
+  		      Nearby
+  		      </li>
+  	      </a>
+  		  </ul>
+  		</div>
+
+    <div id="new-task">
+  		<form id="new-task-form">
+  			<p>
+  				<label for="task-titl e">Title</label>
+  				<input id="task-title" type="text" name="task[title]"/>
+  			</p>
+  			<p>
+  				<label for="task-title">Due date</label>
+  				<input id="task-due" type="text" name="task[due]"/>
+  			</p>
+  			<p>
+  				<label for="task-notes">Notes</label>
+  				<textarea id="task-notes" style="" name="task[notes]"></textarea>
+  			</p>
 			
-			<p>
-				<input type="button" value="Create" id="task-create" onclick="Pooch.create_new_task();"/>
-			</p>
-		</form>
+  			<p>
+  				<input type="button" value="Create" id="task-create" onclick="Pooch.create_new_task();"/>
+  			</p>
+  		</form>
+		</div>
 		
 		<div id="task-list">
 			<!-- <div class='task-instance' style="display:block;">
@@ -38,21 +60,16 @@
 			</div> -->
 		</div>
 		
-		<div id="toolbar">
+		<div id="bottom-toolbar">
 		  <ul>
-		    <a href="#today">
-		      <li class="toolbar-item">
-		      Today
-		      </li>
-	      </a>
-		    <a href="#next">
-		      <li class="toolbar-item">
-		      Next
-		      </li>
-	      </a>
-		    <a href="#complete">
-		      <li class="toolbar-item">
+		    <a href="#completed" onclick="Pooch.show_panel('#completed');">
+		      <li class="toolbar-item" id="completed">
 		      Completed
+		      </li>
+	      </a>
+		    <a href="#new" onclick="Pooch.show_panel('#new');">
+		      <li class="toolbar-item" id="new">
+		      Add Task
 		      </li>
 	      </a>
 		  </ul>
