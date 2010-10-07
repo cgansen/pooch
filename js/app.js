@@ -4,7 +4,8 @@ var Pooch = {
 
 	'init': function(){
 		this.tasks = [];
-		this.highlight_active_panel(window.location.hash);
+		var panel = window.location.hash ? window.location.hash : '#today'; 
+		this.highlight_active_panel(panel);
 		
 		// load the map
     var myOptions = {
