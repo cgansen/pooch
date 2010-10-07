@@ -12,10 +12,12 @@ var Pooch = {
       panel = window.location.hash;
     }
 	  $(panel).addClass('toolbar-item-active');
+	  
+	  $('.panel').hide();
+	  $("div" + panel).show();
 	},
 	
-	'show_panel': function(panel){
-	  // FIXME: make this toggle panels
+	'show_panel': function(panel){    
 	  this.highlight_active_panel(panel);
 	},
 	
@@ -32,7 +34,7 @@ var Pooch = {
 	},
 
 	'insert_task_in_list': function(task) {
-		$("#task-list").append("<div class='task-instance'>" +
+		$("div#today").append("<div class='task-instance'>" +
 				"<div class='task-instance-title'>" +
 					"<canvas width='15' height='15' style='border:1px solid #ccc; margin-right:5px;' id='task-" + task.id + "' onclick='Pooch.mark_complete(\"" + task.id + "\");'></canvas>" +
 					"<a href='#' onclick='Pooch.show_notes($(this).parent().parent()); return false;'>" + task.title + "</a></div>" +

@@ -28,7 +28,7 @@
   		  </ul>
   		</div>
 
-    <div id="new-task">
+    <div id="new-task" class="panel">
   		<form id="new-task-form">
   			<p>
   				<label for="task-titl e">Title</label>
@@ -49,7 +49,7 @@
   		</form>
 		</div>
 		
-		<div id="task-list">
+		<div id="today" class="panel task-list">
 			<!-- <div class='task-instance' style="display:block;">
 				<div class="task-instance-title">
 					<a href="#" onclick='Pooch.show_notes($(this).parent().parent()); return false;'>A Sample Task Title</a>
@@ -67,7 +67,7 @@
 		      Completed
 		      </li>
 	      </a>
-		    <a href="#new" onclick="Pooch.show_panel('#new');">
+		    <a href="#new-task" onclick="Pooch.show_panel('#new-task');">
 		      <li class="toolbar-item" id="new">
 		      Add Task
 		      </li>
