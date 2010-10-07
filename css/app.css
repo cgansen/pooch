@@ -127,7 +127,7 @@ li.toolbar-item {
 li.toolbar-item-active {
   color: #111;
 	-moz-box-shadow: inset 1px 10px 5px #CCCDCC;
-	-webkit-box-shadow: inset 1px 10px 5px #fff;
+	-webkit-box-shadow: inset 1px 10px 5px #CCCDCC;
 }
 
 #bottom-toolbar li {
