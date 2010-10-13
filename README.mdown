@@ -1,3 +1,19 @@
 # Pooch README
 
 Pooch is a test app that demonstrates HTML5 technologies.
+
+## Some nifty HTML5y things it demonstrates
+
+  *  [local storage](http://dev.w3.org/html5/webstorage/)
+  
+  *  [canvas elements](https://developer.mozilla.org/en/Canvas_tutorial)
+    
+  *  [geolocation](http://dev.w3.org/geo/api/spec-source.html)
+  
+  *  [offline access](http://www.w3.org/TR/html5/offline.html)
+
+## There's also:
+
+  * Mobile Google Maps (apiv3)
+  * lots of jQuery
+  * And tons of rounded corners and box-shadow (via CSS3)
